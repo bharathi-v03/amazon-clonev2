@@ -8,7 +8,7 @@ import { updateUser } from '../Redux/cartSlice'
 import { auth } from "../Firebase/firebase-config"
 import {
     signOut
-} from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js'
+} from '@firebase/auth'
 
 function Header() {
 
