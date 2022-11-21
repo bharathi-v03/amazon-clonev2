@@ -121,31 +121,31 @@ function App() {
     <Router>
       <div className="app">
         <Routes>
-          <Route path="/checkout" element={Checkout()}>
+          <Route path="/checkout" element={<Checkout />}>
           </Route>
-          <Route path="/login" element={Login()}>
+          <Route path="/login" element={<Login />}>
           </Route>
-          <Route path="/signup" element={Signup()}>
+          <Route path="/signup" element={<Signup />}>
           </Route>
-          <Route path="/men" element={Men()}>
+          <Route path="/men" element={<Men />}>
           </Route>
-          <Route path="/decoration" element={Decoration()}>
+          <Route path="/decoration" element={<Decoration />}>
           </Route>
-          <Route path="/women" element={Women()}>
+          <Route path="/women" element={<Women />}>
           </Route>
-          <Route path="/tools" element={Tools()}>
+          <Route path="/tools" element={<Tools />}>
           </Route>
-          <Route path="/deals" element={Deals()}>
+          <Route path="/deals" element={<Deals />}>
           </Route>
-          <Route path="/kids" element={Kids()}>
+          <Route path="/kids" element={<Kids />}>
           </Route>
-          <Route path="/electronics" element={Electronics()}>
+          <Route path="/electronics" element={<Electronics />}>
           </Route>
-          <Route path="/appliances" element={Appliances()}>
+          <Route path="/appliances" element={<Appliances />}>
           </Route>
-          <Route path="/kitchen" element={Kitchen()}>
+          <Route path="/kitchen" element={<Kitchen />}>
           </Route>
-          <Route path="/" element={Home()}>
+          <Route path="/" element={<Home />}>
           </Route>
         </Routes>
       </div>
