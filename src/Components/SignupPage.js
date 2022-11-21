@@ -4,7 +4,7 @@ import "../Styles/LoginPage.css"
 import { auth } from "../Firebase/firebase-config"
 import {
     createUserWithEmailAndPassword
-} from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-auth.js'
+} from '@firebase/auth'
 import { useDispatch } from 'react-redux'
 import { updateUser } from '../Redux/cartSlice'
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
