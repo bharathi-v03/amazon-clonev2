@@ -62,3 +62,15 @@
 .header__searchIcon:hover {
     background-color: rgb(228, 168, 30);
 }
+
+@media only screen and (max-width: 991px) {
+    #cart__icon {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .header__link__dup {
+        display: none;
+    }
+}

@@ -37,6 +37,14 @@ function Header() {
                     <Link to='/' className='navbar-brand' id='amazon__logo'>
                         <img width="80px" src='https://clipartcraft.com/images/amazon-smile-logo-transparent-background-7.png' alt='' />
                     </Link>
+                    <div class="nav-item header__link__dup ms-auto">
+                        <Link to='/checkout' className='header__link'>
+                            <div className="header__option__cart">
+                                <ShoppingCartIcon />
+                                <span className='header__optionLineTwo' style={{ "color": "rgb(244, 179, 27)" }}>{qty}</span>
+                            </div>
+                        </Link>
+                    </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
