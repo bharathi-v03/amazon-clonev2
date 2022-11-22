@@ -130,7 +130,7 @@ function Cart() {
                     <div className='checkout__box col-md-3 mt-4'>
                         <div className='checkout__card p-3'>
                             <div className='mb-1'>
-                                Subtotal ({qty} items): <strong>${price}</strong>
+                                Subtotal ({qty} items): <strong>₹{price}</strong>
                             </div>
                             <small>
                                 <div className="form-check d-flex">
