@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from "react-router-dom"
 import StarIcon from '@mui/icons-material/Star';
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
@@ -14,6 +14,10 @@ function Cart() {
     const price = cartItems.reduce((sum, item) => sum = sum + item.price, 0).toFixed(2)
     const navigate = useNavigate();
 
+    useEffect(() => {
+        document.body.scrollTop = document.documentElement.scrollTop = 0
+    }, [])
+
     return (
         (qty === 0)
             ?
@@ -27,7 +31,7 @@ function Cart() {
                                     <p className='price_small_ text-secondary m-0 text-end d-none d-md-block'>Price</p>
                                     <hr className='mt-1' />
                                 </div>
-                                <p className='text-secondary ms-3 me-3' style={{"fontSize":"90%"}}>Your cart is empty. Explore and add items to your cart.</p>
+                                <p className='text-secondary ms-3 me-3' style={{ "fontSize": "90%" }}>Your cart is empty. Explore and add items to your cart.</p>
                                 <hr />
                                 <div className='text-end'>
                                     Subtotal ({qty} items): <strong>₹{price}</strong>

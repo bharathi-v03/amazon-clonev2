@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../Styles/MenPage.css";
 import StarIcon from '@mui/icons-material/Star';
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
@@ -9,6 +9,10 @@ import { addToCart } from '../../Redux/cartSlice'
 function MenPage(props) {
 
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        document.body.scrollTop = document.documentElement.scrollTop = 0
+    }, [])
 
     return (
         <div>
