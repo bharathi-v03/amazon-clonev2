@@ -11,12 +11,17 @@ import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 
 function LoginPage() {
 
+  // useState to save the input data such as email and password
+  // and also the error message when an error occurs
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
+
   const navigate = useNavigate();
   const dispatch = useDispatch()
 
+  // Signs in using provided email address and password
+  // naviagtes to homepage and displays email on header when signed in successfully
   const login = async () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((cred) => {

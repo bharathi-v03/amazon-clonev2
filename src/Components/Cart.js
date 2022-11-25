@@ -8,16 +8,25 @@ import { removeFromCart } from '../Redux/cartSlice'
 
 function Cart() {
 
-    const dispatch = useDispatch()
+    // reading cart data from the store
     const cartItems = useSelector((state) => state.cart.cart)
     const qty = cartItems.length
+
+    // calculating total price and rounding to 2 decimal
     const price = cartItems.reduce((sum, item) => sum = sum + item.price, 0).toFixed(2)
+
+    const dispatch = useDispatch()
     const navigate = useNavigate();
 
+    // scrolling to top on the load of the page
     useEffect(() => {
         document.body.scrollTop = document.documentElement.scrollTop = 0
     }, [])
 
+    // if cart is empty -> displays cart is empty,
+    // and shows continue shopping button which navigates to homepage
+    // if cart contains products -> diplays product details and total price,
+    // and also (remove from cart) button which on click removes the respective product from the cart in the store 
     return (
         (qty === 0)
             ?

@@ -10,10 +10,13 @@ function ToolsPage() {
     
     const dispatch = useDispatch()
 
+    // scrolling to top on the load of the page
     useEffect(() => {
         document.body.scrollTop = document.documentElement.scrollTop = 0
     }, [])
 
+    // returns product cards of tools
+    // contains (add to cart) button which on click add respective products to cart state in the store
     return (
         <div>
             <div className='mx-auto' style={{ "maxWidth": "97%" }}>

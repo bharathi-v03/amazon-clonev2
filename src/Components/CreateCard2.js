@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import "../Styles/HomePageCards.css"
 
 function CreateCard(props) {
+    // creating single image card using json data and other necessary details received through props
     return (
         <div>
             <div className='card border-0 rounded-0 p-2 mt-2'>

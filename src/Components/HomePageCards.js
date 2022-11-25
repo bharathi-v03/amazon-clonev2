@@ -16,8 +16,13 @@ import electronicsScrollmenu from "../JSON/electronicsScrollmenu.json"
 function HomePageCards() {
 
     const navigate = useNavigate();
+
+    // if user is not logged in, shows signIn card in home page
     const user = useSelector((state) => state.cart.user)
 
+    // For every card column, json file and necessary details are passed to CreateCard component
+    // and that component returns a card designed for it
+    // On clicking every card, navigates to respective pages
     return (
         <div>
             <div className='mx-auto' style={{ "maxWidth": "97%" }}>

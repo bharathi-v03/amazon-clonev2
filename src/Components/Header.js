@@ -12,12 +12,16 @@ import {
 
 function Header() {
 
+    // reading cart and user data from the store
     const cart = useSelector((state) => state.cart.cart)
-    const qty = cart.length
     const user = useSelector((state) => state.cart.user)
+    const qty = cart.length
+
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
+    // updating user value back to null after logging out
+    // and navigate to login page
     const logout = async () => {
         signOut(auth)
             .then(() => {
@@ -30,6 +34,10 @@ function Header() {
             })
     }
 
+    // displaying header with signIn/logout, searchbar, username 
+    // and number of products in the cart
+    // if user is present -> displays username and logout button
+    // else -> displays signIn
     return (
         <div className="header__navbarTop">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

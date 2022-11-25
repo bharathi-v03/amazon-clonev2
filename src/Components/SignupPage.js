@@ -11,12 +11,17 @@ import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 
 function SignupPage() {
 
+    // useState to save the input data such as email and password
+    // and also the error message when an error occurs
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
+
     const navigate = useNavigate();
     const dispatch = useDispatch()
 
+    // Creates, and on success, logs in a user with the given email address and password
+    // naviagtes to homepage and displays email on header when signed in successfully
     const signup = async () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((cred) => {
@@ -50,7 +55,6 @@ function SignupPage() {
     }
 
     return (
-
         <div>
             <div className='login container' id='login'>
                 <Link to='/'>
@@ -115,39 +119,6 @@ function SignupPage() {
                 © 1996-2022, Amazon.com, Inc. or its affiliates
             </div>
         </div>
-
-        // <div className='login container w-25'>
-        //     <Link to='/'>
-        //         <img className='login__logo mx-auto d-block mt-2' src='https://logos-world.net/wp-content/uploads/2020/04/Amazon-Logo.png' alt='' />
-        //     </Link>
-        //     <div className='login__card card rounded-1 p-4'>
-        //         <h2>Sign-in</h2>
-        //         <div>
-        //             <div className="mt-2">
-        //                 <label className="" htmlFor="email"><small><strong>E-mail</strong></small></label>
-        //                 <input className="form-control form-control-sm rounded-0 border-dark"
-        //                     onChange={(e) => setEmail(e.target.value)} type="email" id="email" />
-        //             </div>
-        //             <div className="mt-2">
-        //                 <label className="" htmlFor="pwd"><small><strong>Password</strong></small></label>
-        //                 <input className="form-control form-control-sm rounded-0 border-dark"
-        //                     onChange={(e) => setPassword(e.target.value)} type="password" id="pwd" />
-        //             </div>
-        //             <div className="mt-4">
-        //                 <button className='btn btn-warning btn-sm form-control border-secondary' onClick={signup}>Sign up</button>
-        //             </div>
-        //         </div>
-        //         <p className='mt-3' style={{ "fontSize": "74%" }}>
-        //             By signing-in you agree to Amazon's Conditions of Use & Sale. Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
-        //         </p>
-        //         <div className=''>
-        //             <span>Already have an account? </span>
-        //             <Link to='/login'>
-        //                 Sign in
-        //             </Link>
-        //         </div>
-        //     </div>
-        // </div>
     )
 }
 

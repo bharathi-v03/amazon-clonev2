@@ -5,6 +5,9 @@ const initialState = {
     user: null,
 };
 
+// requires a string name to identify the slice = "cart",
+// inititalState,
+// one or more reducer functions to define how the state can be updated
 const cartSlice = createSlice({
     name: "cart",
     initialState,
@@ -28,6 +31,6 @@ const cartSlice = createSlice({
     }
 })
 
+// export the generated Redux action creators and the reducer function for the whole slice
 export const { addToCart, removeFromCart, updateUser } = cartSlice.actions
-
 export default cartSlice.reducer

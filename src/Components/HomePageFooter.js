@@ -4,6 +4,8 @@ import { Link } from "react-router-dom"
 
 function HomePageFooter() {
 
+    //scrolls to top on clicking the specified div
+    // redirects to respective pages on clicking links
     return (
         <div>
             <div className="container-fluid text-light backToTopContainer"

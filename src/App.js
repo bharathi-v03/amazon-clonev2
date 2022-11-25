@@ -17,6 +17,7 @@ import ElectronicsPage from "./Components/Pages/ElectronicsPage";
 import AppliancesPage from "./Components/Pages/AppliancesPage";
 import KitchenPage from "./Components/Pages/KitchenPage";
 
+// Cart page
 function Checkout() {
   return <div className="headerandcart">
     <Header />
@@ -25,6 +26,7 @@ function Checkout() {
   </div>
 }
 
+//Login and Signup pages
 function Login() {
   return <div>
     <LoginPage />
@@ -37,6 +39,7 @@ function Signup() {
   </div>
 }
 
+//Product pages (men, women, decoration, tools, deals, kids, electronics, appliances, kitchen)
 function Men() {
   return <div className='pages'>
     <Header />
@@ -109,6 +112,7 @@ function Kitchen() {
   </div>
 }
 
+//Home page
 function Home() {
   return <div className='homeandheader'>
     <Header />

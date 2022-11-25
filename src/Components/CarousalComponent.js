@@ -3,6 +3,7 @@ import "../Styles/HomePage.css"
 import { Link } from "react-router-dom"
 
 function CarousalComponent() {
+    // returns image slider which on clicking navigates to different pages
     return (
         <Carousel id='home__image'>
             <Carousel.Item>
